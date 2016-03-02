@@ -1,0 +1,10 @@
+[user]
+  name = Ivan Vergiliev
+  email = ivan@leanplum.com
+[push]
+  default = simple
+[alias]
+  co = checkout
+  ff = pull --ff-only
+  pwb = symbolic-ref --short HEAD
+
