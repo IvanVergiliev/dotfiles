@@ -1,3 +1,5 @@
+set switchbuf=usetab
+
 set nosmartindent
 set tabstop=2
 set shiftwidth=2

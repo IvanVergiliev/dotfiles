@@ -37,6 +37,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+setopt HIST_IGNORE_SPACE
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -79,7 +80,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export CXXFLAGS="-std=c++11 -Wall"
+export CXXFLAGS="-std=c++1z -Wall -O2"
 export EDITOR=vim
 
 # OPAM configuration
