@@ -86,5 +86,5 @@ export EDITOR=vim
 # OPAM configuration
 . /Users/ivan/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-alias vim=/usr/local/Cellar/vim/7.4.488/bin/vim
+alias vim=/usr/local/bin/vim
 eval $(thefuck --alias)
