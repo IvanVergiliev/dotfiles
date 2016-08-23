@@ -15,6 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+Plugin 'kchmck/vim-coffee-script'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,6 +57,15 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+
 set mouse=a
 
 syntax on
+
+set incsearch
+set number
+
+set scrolloff=5 " Keep 5 lines below and above the cursor
+
+set backspace=indent,eol,start
