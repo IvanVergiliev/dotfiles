@@ -46,7 +46,7 @@ setopt HIST_IGNORE_SPACE
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew npm anaconda sbt)
+plugins=(git brew npm anaconda)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,20 +85,6 @@ export EDITOR=vim
 
 # OPAM configuration
 . /Users/ivan/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/ivan/src/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables zsh completion for gcloud.
-source '/Users/ivan/src/google-cloud-sdk/completion.zsh.inc'
-
-alias csearch=/Users/ivan/src/Leanplum/Tools/developer-env/csearch
-
-export JAVA_HOME_7=$(/usr/libexec/java_home -v 1.7)
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-export PATH=$PATH:/Users/ivan/src/arcanist/bin
-source /Users/ivan/src/arcanist/resources/shell/bash-completion
 
 alias vim=/usr/local/Cellar/vim/7.4.488/bin/vim
 eval $(thefuck --alias)
