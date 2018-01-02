@@ -2,7 +2,7 @@
 
 - install `homebrew` (http://brew.sh)
 - install `zsh` from `homebrew` and set it as default shell (http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/)
-- `brew install thefuck vim`
+- `brew install thefuck vim jump`
 - install oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh#basic-installation)
 - `ln -s $(pwd)/.zshrc ~`
 - `ln -s $(pwd)/oh-my-zsh/custom/main.zsh ~/.oh-my-zsh/custom`
