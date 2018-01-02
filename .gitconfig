@@ -1,12 +1,27 @@
 [user]
-  name = Ivan Vergiliev
-  email = ivan@leanplum.com
+	name = Ivan Vergiliev
+	email = ivan.vergiliev@gmail.com
 [core]
 	pager = less -F -X
+	excludesfile = /Users/ivan/.gitignore
 [push]
   default = simple
 [alias]
   co = checkout
   ff = pull --ff-only
   pwb = symbolic-ref --short HEAD
-
+  # Peltekov's log aliases
+  l = log --graph --decorate --pretty=oneline --abbrev-commit
+  la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[rerere]
+	enabled = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

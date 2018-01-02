@@ -88,3 +88,10 @@ export EDITOR=vim
 
 alias vim=/usr/local/bin/vim
 eval $(thefuck --alias)
+
+export NVM_DIR="/Users/ivan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$PATH:/Users/ivan/src/arcanist/bin/"
+
+export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled"

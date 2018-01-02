@@ -16,6 +16,17 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'editorconfig/editorconfig-vim'
+
+" Continuosly update session files. Use :Obsess to create a new session.
+Plugin 'tpope/vim-obsession'
+
+Plugin 'saltstack/salt-vim'
+
+" Change cursor shape in insert mode, smarter pasting, etc.
+Plugin 'wincent/terminus'
+
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,3 +80,22 @@ set number
 set scrolloff=5 " Keep 5 lines below and above the cursor
 
 set backspace=indent,eol,start
+
+" Following settings are from https://kinbiko.com/vim/my-shiniest-vim-gems/ .
+set cursorline " Highlight the row the cursor is currently on.
+" set cursorcolumn - same but for the column.
+
+" Highlight trailing whitespace.
+set listchars=tab:\ \ ,trail:·
+set list
+
+" Make J merge commented out lines correctly.
+if v:version > 703 || v:version == 703 && has('patch541')
+  set formatoptions+=j
+endif
+
+" Configure ack.vim to use ag for searching.
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
