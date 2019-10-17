@@ -15,13 +15,15 @@ function diffm {
 }
 
 function pushup {
-  git push -u origin $(git pwb)
+  local local_branch=$(git pwb)
+  local remote_branch=ivan-${local_branch}
+  git push -u origin ${local_branch}:${remote_branch}
 }
 
 function openpr {
   pushup
   local remote_name=$(git remote get-url origin | sed 's/.*://' | sed 's/\/.*//')
-  local branch_name=$(git pwb)
+  local branch_name=ivan-$(git pwb)
   local repo_name=$(basename `git rev-parse --show-toplevel`)
   local base_branch='master'
   if [ ${repo_name} == 'heap' ]; then
@@ -32,7 +34,7 @@ function openpr {
 }
 
 function fetchup {
-  git fetch upstream && git merge --ff-only upstream/$(git pwb)
+  git fetch upstream && git merge --ff-only upstream/ivan-$(git pwb)
 }
 
 alias gs="git status"
